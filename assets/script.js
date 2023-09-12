@@ -1,0 +1,2 @@
+// API key = "f1c5283143e97d8ae4884e8e89154970"
+var apiUrl = "https://api.openweathermap.org/data/3.0/onecall?" + "lat={lat}" + "&lon={lon}" + "&exclude={part}" + "&appid=f1c5283143e97d8ae4884e8e89154970"
