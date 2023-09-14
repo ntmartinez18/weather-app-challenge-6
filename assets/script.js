@@ -89,7 +89,7 @@ function saveSearch() {
     // searchHistory.classList = "list";
 }
 
-
+// added click event listener for search button to trigger the getCity function
 searchBtn.addEventListener("click", getCity);
 inputElement.addEventListener("input", function (event) {
     userInput = event.target.value;
