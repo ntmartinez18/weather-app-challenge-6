@@ -12,9 +12,20 @@
     </header>
     <main>
         <div>
-            <input type="text" id="userInput"></input>
+            <input type="text" id="userInputLat"></input>
+            <input type="text" id="userInputLon"></input>
             <button id="search-btn">Search</button>
+        </div>
 
+        <div>
+            <select class="dropdown">
+                <option value="option1" selected>Options</option>
+                <option value="option2" id="option2">Current Weather Conditions</option>
+                <option value="option3" id="option3">5-day Forecast</option>
+              </select>
+              
+            <h2>Showing Results for:</h2>
+            <div id="results-container"></div>
         </div>
 
     </main>
