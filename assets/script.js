@@ -26,7 +26,7 @@ function getCity() {
             console.log(data[0].lon)
             getWeather(data[0].lat, data[0].lon)
             getFiveDay(data[0].lat, data[0].lon)
-            saveSearch(data[0].lat, data[0].lon)
+            saveSearch()
         })
 }
 
@@ -43,11 +43,11 @@ function getWeather(lat, lon) {
         console.log(data)
         console.log(data.main.temp)
         var temp = document.createElement("p")
-        temp.textContent = "temp: " + data.main.temp
+        temp.textContent = "temp: " + data.main.temp + "°F"
         var humidity = document.createElement("p")
-        humidity.textContent = "humidity: " + data.main.humidity
+        humidity.textContent = "humidity: " + data.main.humidity + "%"
         var windSpeed = document.createElement("p")
-        windSpeed.textContent = "wind: " + data.wind.speed
+        windSpeed.textContent = "wind: " + data.wind.speed + "mph"
         displayData.append(temp, humidity, windSpeed)
     })
 }
@@ -66,11 +66,11 @@ function getFiveDay(lat, lon) {
         for (var i = 0; i < data.list.length; i += 8) {
         console.log(data.list[i].main.temp)
         var temp = document.createElement("p")
-        temp.textContent = "temp: " + data.list[i].main.temp
+        temp.textContent = "temp: " + data.list[i].main.temp + "°F"
         var humidity = document.createElement("p")
-        humidity.textContent = "humidity: " + data.list[i].main.humidity
+        humidity.textContent = "humidity: " + data.list[i].main.humidity + "%"
         var windSpeed = document.createElement("p")
-        windSpeed.textContent = "wind: " + data.list[i].wind.speed
+        windSpeed.textContent = "wind: " + data.list[i].wind.speed + "mph"
         displayDataFiveDay.append(temp, humidity, windSpeed)
         }
     })
@@ -79,14 +79,10 @@ function getFiveDay(lat, lon) {
 // created a function to save user search history to local storage to be accessed again
 function saveSearch() {
     console.log(userInput)
-    var city = document.createElement("li")
-    city.textContent = userInput.value
-    searchHistory.append(city.textContent)
-    // var userInput = document.createElement("li")
-    // userInput.textContent = data.main.name
-    // searchHistory.append(userInput)
-    // var searchHistory = document.createElement("li");
-    // searchHistory.classList = "list";
+    var userInput = document.createElement("p")
+    // localStorage.setItem("city", userInput);
+    // userInput.innerText = localStorage.getItem("city")
+    searchHistory.append(userInput)
 }
 
 // added click event listener for search button to trigger the getCity function

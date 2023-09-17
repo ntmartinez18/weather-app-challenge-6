@@ -9,7 +9,7 @@
     font-size: 25px;
 }
 
-#userInput, {
+#userInput {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -17,8 +17,7 @@
     width: 50%;
 }
 
-#search-btn,
-.dropdown {
+#search-btn {
     border: none;
     background-color: blue;
     color: aliceblue;
@@ -33,9 +32,19 @@
     align-items: center;
 }
 
-.list {
+.p {
     margin: 0;
     padding: 0;
     text-align: center;
     display: inline-block;
+}
+
+#results-container {
+    background-color: lavender;
+    font-size: 18px;
+}
+
+#results-container-fiveday {
+    background-color: lightblue;
+    font-size: 18px;
 }
