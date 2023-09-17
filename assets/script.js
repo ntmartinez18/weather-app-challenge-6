@@ -79,10 +79,9 @@ function getFiveDay(lat, lon) {
 // created a function to save user search history to local storage to be accessed again
 function saveSearch() {
     console.log(userInput)
-    var userInput = document.createElement("p")
-    // localStorage.setItem("city", userInput);
-    // userInput.innerText = localStorage.getItem("city")
     searchHistory.append(userInput)
+    localStorage.setItem("userInput", userInput)
+    localStorage.getItem("userInput")
 }
 
 // added click event listener for search button to trigger the getCity function
