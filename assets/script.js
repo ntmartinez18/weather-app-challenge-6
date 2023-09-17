@@ -6,7 +6,6 @@ var displayData = document.querySelector("#results-container");
 var displayDataFiveDay = document.querySelector("#results-container-fiveday");
 var searchHistory = document.getElementById("history-container");
 
-// let userInput = '';
 var userInput;
 
 
@@ -79,13 +78,14 @@ function getFiveDay(lat, lon) {
 // created a function to save user search history to local storage to be accessed again
 function saveSearch() {
     console.log(userInput)
-    searchHistory.append(userInput)
     localStorage.setItem("userInput", userInput)
     localStorage.getItem("userInput")
+    searchHistory.append(userInput)
 }
 
-// added click event listener for search button to trigger the getCity function
+// added click event listener for search button and search history element to trigger the getCity function
 searchBtn.addEventListener("click", getCity);
+searchHistory.addEventListener("click", getCity);
 inputElement.addEventListener("input", function (event) {
     userInput = event.target.value;
 });
