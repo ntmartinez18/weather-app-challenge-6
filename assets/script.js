@@ -123,10 +123,3 @@ searchHistory.addEventListener("click", getCity);
 inputElement.addEventListener("input", function (event) {
     userInput = event.target.value;
 });
-
-
-// API key = "f1c5283143e97d8ae4884e8e89154970"
-
-// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
-
-// var apiUrl = "https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid=f1c5283143e97d8ae4884e8e89154970"

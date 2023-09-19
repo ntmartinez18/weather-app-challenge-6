@@ -20,7 +20,7 @@ N/A
 To use this application, type a city in the search bar and click the "search" button. A list of weather information will be displayed under the "Showing Current Results for" section that displays the current weather conditions of that city. Weather conditions include city temperature, humidity, and wind speed. Under the "Showing Five-Day Results for" the user will see the five day weather forecast displayed every three hours of that day. Search history will be stored so a user can then click on their previous search and results will be displayed again.
 
 ## Credits
-Thanks to Eric Sayers, GreatStack, other people
+Thanks to Eric Sayers for his help and guidance with this project as well as the Xpert Learning Assistant tool and openWeather API.
 
 ## License
 MIT
