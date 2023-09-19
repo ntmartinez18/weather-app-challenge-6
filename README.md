@@ -6,7 +6,10 @@
 Allows users to search a city's current weather and projected five-day weather forecast. Provides a list of previous searches and makes them available to be searched again. This application displays information about a city's temperature, humidity, and wind speeds, as well as the date. Icons are used to represent temperature, humidity, and wind speeds.
 
 ## Visuals
-include link and pic
+
+<img src="./assets/weather-app-ss.png" alt="weather-application-screenshot">
+
+(https://ntmartinez18.github.io/weather-app-challenge-6/)
 
 ## Technologies
 * html
