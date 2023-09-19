@@ -5,12 +5,12 @@ const inputElement = document.getElementById("userInput");
 var displayData = document.querySelector("#results-container");
 var displayDataFiveDay = document.querySelector("#results-container-fiveday");
 var searchHistory = document.getElementById("history-container");
-
-
-
-
-
 var userInput;
+var thermometerIcon = document.querySelector("#thermometer")
+var cloudIcon = document.querySelector("#cloud")
+var sunIcon = document.querySelector("#sun")
+
+
 
 
 
@@ -30,9 +30,8 @@ function getCity() {
             getWeather(data[0].lat, data[0].lon)
             getFiveDay(data[0].lat, data[0].lon)
             saveSearch()
-
-
             getCurrentDate()
+            displayIcons()
         })
 }
 
@@ -58,7 +57,7 @@ function getWeather(lat, lon) {
         })
 }
 
-// created function to get the five day weather forecast
+// created function to get the five day weather forecast and date
 function getFiveDay(lat, lon) {
     console.log("weather displayed")
 
@@ -77,19 +76,12 @@ function getFiveDay(lat, lon) {
                 humidity.textContent = "humidity: " + data.list[i].main.humidity + "%"
                 var windSpeed = document.createElement("p")
                 windSpeed.textContent = "wind: " + data.list[i].wind.speed + "mph"
-
-
-
-
-
                 const dtTxt = data.list[i+1].dt_txt;
                 const formattedDate = new Date(dtTxt).toLocaleString('en-US', {
                     month: 'short',
                     day: 'numeric',
                     year: 'numeric'
                 })
-                
-
                 displayDataFiveDay.append(formattedDate, temp, humidity, windSpeed)
             }
         })
@@ -118,9 +110,12 @@ function getCurrentDate() {
 }
 
 
-
-
-
+function displayIcons() {
+    console.log("images displayed")
+    thermometerIcon.classList.replace("hide", "show")
+    cloudIcon.classList.replace("hide", "show")
+    sunIcon.classList.replace("hide", "show")
+}
 
 // added click event listener for search button and search history element to trigger the getCity function
 searchBtn.addEventListener("click", getCity);

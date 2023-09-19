@@ -11,19 +11,31 @@
         <h1>Weather App</h1>
     </header>
     <main>
+        <!-- created div for the search bar and button -->
         <div>
             <input type="text" id="userInput"></input>
             <button id="search-btn">Search</button>
         </div>
+
+        <!-- created div for current weather results -->
         <div>
             <h2>Showing Current Results for:</h2>
+            <img src="./assets/icons/thermometer-24px.png" alt="thermometer-icon" class="hide" id="thermometer">
+            <img src="./assets/icons/sun-24px.png" alt="sun-icon" class="hide" id="sun">
+            <img src="./assets/icons/cloud-24px.png" alt="cloud-icon" class="hide" id="cloud">
             <div id="results-container"></div>
         </div>
+
+        <!-- created div for five day weather forecast -->
         <div>
             <h2>Showing Five-Day Results for:</h2>
+            <img src="./assets/icons/thermometer-24px.png" alt="thermometer icon" class="hide" id="thermometer">
+            <img src="./assets/icons/sun-24px.png" alt="sun-icon" class="hide" id="sun">
+            <img src="./assets/icons/cloud-24px.png" alt="cloud-icon" class="hide" id="cloud">
             <div id="results-container-fiveday"></div>
         </div>
 
+        <!-- created div to contain the search history -->
         <div>
             <h2>Search History</h2>
             <div id="history-container"></div>
